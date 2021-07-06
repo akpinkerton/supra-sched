@@ -47,6 +47,7 @@
   - [ ] Search by person/people
 
 ### 🏋🏼‍♀️ Stretch goals
+  - [ ] Find a way to create table by adding a new user without having an existing ind user table created in db
   - [ ] APIs???
   - [ ] Display Unit Cal
     - [ ] Have table with member's flights/sections to be able to search by different criteria

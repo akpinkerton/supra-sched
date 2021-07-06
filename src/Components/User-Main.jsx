@@ -11,7 +11,7 @@ function Main() {
   return (
     <div className="container-fluid page justify-content-between">
 
-      {/* <button> <Link to="/input" className="nav-link"> Add Event</Link></button> */}
+      {/* <button className="btn btn-secondary"> <Link to="/input" className="nav-link"> Add Event</Link></button> */}
 
       <InputModal/>
 
