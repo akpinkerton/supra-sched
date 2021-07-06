@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Project Week 2 - Full Stack Idea
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
+  - [ ] ERD
+  - [ ] Test using Cypress and Jest / React Testing Lib
+  - [ ] SPA using React
+  - [ ] Server - Express
+  - [ ] SQL - Postgres
 
-## Available Scripts
+### ✅ Initial Must Dos
+- [ ] Input a meeting/timeblock
+- [ ] Push user inputs to a list
+- [ ] Post inputs to a server using express
+  - [ ] On submit, POST to server with a fecth ()
+- [ ] Write inputs to local stroage (inputs.json)
+- [ ] Send json data to file path '/###' on localhost
+- [ ] GET data from '/###' to display for schedule
+- [ ] Replace local storage .json using database (knex)
 
-In the project directory, you can run:
+#### 📱 App Layout
+- [ ] Navbar
+  - Home (log in)
+  - Personal Calendar
+  - Unit Calendar
+- [ ] Home Page
+  - login
+  - once logged in, display personal calendar with a create event button
+- [ ] Add event
+  - POST as logged in user
+  - [ ] Event name / Task
+    -  Event Input Fields
+      - [ ] Date and Time
+        - [ ] Blocks already scheduled time
+      - [ ] Find a time?
+      - [ ] Attendees
+        - [ ] Checkboxes and delete times that the attendeess unavailable
+        - [ ] Refactor into a visial table that displays the day with available times for everyone
+      - [ ] Location
+      - [ ] Availability: Busy, Free
+    - Task Input Fields
+      - [ ] Due date
+      - [ ] Priority: High, Weekly, Monthly, Free/Idea
+- [ ] View Personal Calendar
+  - [ ] Delete event option
+  - [ ] Edit event option
+- [ ] View Unit Calendar
+  - [ ] Search by person/people
 
-### `npm start`
+### 🏋🏼‍♀️ Stretch goals
+  - [ ] APIs???
+  - [ ] Display Unit Cal
+    - [ ] Have table with member's flights/sections to be able to search by different criteria
+  - [ ] Deploy on AWS or Heroku
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### 💄 Styling Points
+  - [ ] Bootstrap
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###### README reqs
+  - [ ] Project Title
+  - [ ] Overview
+  - [ ] Table of contents
+  - [ ] Description
+  - [ ] Installation instructions
+  - [ ] Usage
+  - [ ] Team members and roles
+  - [ ] Roadmap
+  - [ ] Screen captures (gifs) of app in action
+    - Resources on how are on Learn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###### Presentation reqs
+  - [ ] Demonstrate App
+  - [ ] Discuss React, Styling, API
+  - Every team member
+  - Talking points on Learn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+###### NOTES
+  - Presentation - Friday, 9 July, after lunch
+    - Check out the CAR (Challenge, Action, Result) framework to help structure your presentation → https://thehiredguns.com/car-technique-secret-interviewing-weapon/
+  - As an audience member, come up with at least two questions for a team other than your own
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###### Initial Ideas
+- Scheduler
+  - Input a meeting
+  - See calander
+  - Find availability for meetings
+  - View schedules for a group
+    - EX: Unit on shift work
