@@ -94,4 +94,4 @@
   - See calander
   - Find availability for meetings
   - View schedules for a group
-    - EX: Unit on shift work
+    - EX: Unit on shift work# supra-sched
