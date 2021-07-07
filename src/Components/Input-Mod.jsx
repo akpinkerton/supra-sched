@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom'; //router needed is even though not used
+import TimeSelector from './Time-Selector';
 import {modal} from 'bootstrap'
 
 
@@ -130,6 +131,8 @@ function InputModal() {
                   <input className="form-control" type='time' onChange={handleStartTime} value={startTime} />
                 </div>
 
+  <TimeSelector/>
+  
                 <div className='container-fluid d-flex mt-3'>
                   <p className="col-2">End:</p>
                   <input className="form-control" type='date' onChange={handleEndDate} value={endDate} />

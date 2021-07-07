@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './css/App.css';
 import Main from './Components/User-Main'
 import Navbar from './Components/Navbar'
-import InputForm from './Components/archive/Event-Input';
 import Login from './Components/Login';
-import InputModal from './Components/Input-Mod';
+import Sandbox from './Components/00-Sandbox'
 
 function App() {
   return (
@@ -16,8 +15,7 @@ function App() {
 
         <Route exact path="/login" component={Login} />
         <Route exact path="/home" component={Main} />
-        <Route exact path="/input" component={InputForm} />
-        <Route exact path="/modal" component={InputModal} />
+        <Route exact path="/sandbox" component={Sandbox} />
 
         </>
     </Switch>
