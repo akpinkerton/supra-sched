@@ -28,12 +28,12 @@ function Tasks() {
   return (
     <div className="container">
           {inputsRetrieved.filter(inputs => inputs.type === "task").map(taskInput =>
-                     <div class="">
-                     <div class="task">
-                       <div class="container-fluid d-flex task-preview flex-wrap justify-content-between">
+                     <div className="">
+                     <div className="task">
+                       <div className="container-fluid d-flex task-preview flex-wrap justify-content-between">
 
                 {taskInput.eventTitle}
-                <form onSubmit={deleteTask} id={taskInput.id}><button className="btn btn-warning" type='submit'><i class="fas fa-trash-alt"></i></button></form>
+                <form onSubmit={deleteTask} id={taskInput.id}><button className="btn btn-warning" type='submit'><i className="fas fa-trash-alt"></i></button></form>
               </div>
               </div>
 

@@ -4,14 +4,14 @@ function InputForm() {
 
   return (
     <div>
-      
-      <div class="form-holder row">
+
+      <div className="form-holder row">
         <h1>Enter an Event:</h1>
         <form>
 
-          <input class="form-control" type='text' placeholder='Event Title...' />
+          <input className="form-control" type='text' placeholder='Event Title...' />
 
-          <input class="form-control mt-3" ype='text' placeholder='Location...' />
+          <input className="form-control mt-3" ype='text' placeholder='Location...' />
 
           <div className="col-md-12 mt-3">
             <input type="checkbox" name="user" id="anna" />
@@ -28,7 +28,7 @@ function InputForm() {
 
           </div>
 
-          <input type="button" value="Submit" class="btn btn-dark mt-3" />
+          <input type="button" value="Submit" className="btn btn-dark mt-3" />
         </form>
       </div>
     </div>
