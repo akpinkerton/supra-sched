@@ -8,26 +8,24 @@
   - [ ] SQL - Postgres
 
 ### ✅ Initial Must Dos
-- [ ] Input a meeting/timeblock
-- [ ] Push user inputs to a list
-- [ ] Post inputs to a server using express
-  - [ ] On submit, POST to server with a fecth ()
-- [ ] Write inputs to local stroage (inputs.json)
-- [ ] Send json data to file path '/###' on localhost
-- [ ] GET data from '/###' to display for schedule
-- [ ] Replace local storage .json using database (knex)
+- [X] Input a meeting/timeblock
+- [X] Push user inputs to a list
+- [X] Post inputs to a server using express
+  - [X] On submit, POST to server with a fecth ()
+- [X] Send json data to file path '/Home' on localhost
+- [X] GET data from '/Home' to display for schedule
 
 #### 📱 App Layout
-- [ ] Navbar
+- [X] Navbar
   - Home (log in)
   - Personal Calendar
   - Unit Calendar
 - [ ] Home Page
-  - login
-  - once logged in, display personal calendar with a create event button
-- [ ] Add event
-  - POST as logged in user
-  - [ ] Event name / Task
+  - [ ] login
+  - [X] once logged in, display personal calendar with a create event button
+- [X] Add event
+  - [ ] POST as logged in user
+  - [X] Event name / Task
     -  Event Input Fields
       - [ ] Date and Time
         - [ ] Blocks already scheduled time

@@ -1,14 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom'; //router needed is even though not used
+import TimePicker from './Time-Picker';
 import {modal} from 'bootstrap'
 
 
 function InputModal() {
   const [type, setType] = useState ('')
   const [event, setEvent] = useState('')
-  const [date, setDate] = useState('')
-  const [time, setTime] = useState('')
+  const [startDate, setStartDate] = useState('')
+  const [startTime, setStartTime] = useState('')
+  const [endDate, setEndDate] = useState('')
+  const [endTime, setEndTime] = useState('')
   const [location, setLocation] = useState('')
+  const [availability, setavailability] = useState('')
   const [attendees, setAttendees] = useState([])
 
   const [inputs, setInputs] = useState({})
@@ -21,16 +25,28 @@ function InputModal() {
     setEvent(e.target.value)
   }
 
-  function handleDate(e) {
-    setDate(e.target.value)
+  function handleStartDate(e) {
+    setStartDate(e.target.value)
   }
 
-  function handleTime(e) {
-    setTime(e.target.value)
+  function handleStartTime(e) {
+    setStartTime(e.target.value)
+  }
+
+  function handleEndDate(e) {
+    setEndDate(e.target.value)
+  }
+
+  function handleEndTime(e) {
+    setEndTime(e.target.value)
   }
 
   function handleLocation(e) {
     setLocation(e.target.value)
+  }
+
+  function handleAvail(e) {
+    setavailability(e.target.id)
   }
 
   function handleAttendees(e) {
@@ -38,7 +54,16 @@ function InputModal() {
   }
 
   function handleSubmit(e) {
-    setInputs({type:type, event:event, date:date, time:time, location:location, attendees:attendees})
+    setInputs({
+      type:type,
+      event:event,
+      startDate:startDate,
+      startTime:startTime,
+      endDate: endDate,
+      endTime: endTime,
+      location:location,
+      availability: availability,
+      attendees:attendees})
     console.log(inputs);
   }
   useEffect(() => {
@@ -76,18 +101,33 @@ function InputModal() {
               <form>
 
                 <div className="btn-group btn-group-toggle" data-toggle="buttons" onChange={handleType} >
-                  <label class="btn btn-secondary active"><input type="radio" name="options" id="Event" checked/> Event </label>
+                  <label class="btn btn-secondary active"><input type="radio" name="options" id="Event"/> Event </label>
                   <label class="btn btn-secondary"><input type="radio" name="options" id="Task"/> Task </label>
                 </div>
 
                 <input className="form-control mt-3" type='text' placeholder='Event Title...' onChange={handleEvent} value={event} />
 
+
                 <div className='container-fluid d-flex mt-3'>
-                  <input className="form-control" type='date' onChange={handleDate} value={date} />
-                  <input className="form-control" type='time' onChange={handleTime} value={time} />
+                  <p>Start:</p>
+                  <input className="form-control" type='date' onChange={handleStartDate} value={startDate} />
+                  <input className="form-control" type='time' onChange={handleStartTime} value={startTime} />
                 </div>
 
+                <div className='container-fluid d-flex mt-3'>
+                  <p>End:</p>
+                  <input className="form-control" type='date' onChange={handleEndDate} value={endDate} />
+                  <input className="form-control" type='time' onChange={handleEndTime} value={endTime} />
+                </div>
+
+                {/* <TimePicker/> */}
+
                 <input className="form-control mt-3" type='text' placeholder='Location...' onChange={handleLocation} value={location} />
+
+                <div className="btn-group btn-group-toggle mt-3" data-toggle="buttons" onChange={handleAvail} >
+                  <label class="btn btn-secondary active"><input type="radio" name="availability" id="Busy" checked/> Busy </label>
+                  <label class="btn btn-secondary"><input type="radio" name="availability" id="Free"/> Free </label>
+                </div>
 
                 <div className="col-md-12 mt-3" >
                     <input type="checkbox" name="user" id="Anna" onChange={handleAttendees}/>

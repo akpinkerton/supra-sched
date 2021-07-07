@@ -8,8 +8,10 @@ exports.up = function(knex) {
   .createTable('anna', table => {
     table.increments('id');
     table.string('eventTitle').notNullable();
-    table.string('date').notNullable();
-    table.string('time').notNullable();
+    table.string('startDate').notNullable();
+    table.string('startTime').notNullable();
+    table.string('endDate').notNullable();
+    table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability')
@@ -17,17 +19,21 @@ exports.up = function(knex) {
   .createTable('roemello', table => {
     table.increments('id');
     table.string('eventTitle').notNullable();
-    table.string('date').notNullable();
-    table.string('time').notNullable();
+    table.string('startDate').notNullable();
+    table.string('startTime').notNullable();
+    table.string('endDate').notNullable();
+    table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
-    table.sting('availability')
+    table.string('availability')
   })
   .createTable('felix', table => {
     table.increments('id');
     table.string('eventTitle').notNullable();
-    table.string('date').notNullable();
-    table.string('time').notNullable();
+    table.string('startDate').notNullable();
+    table.string('startTime').notNullable();
+    table.string('endDate').notNullable();
+    table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability')
@@ -35,8 +41,10 @@ exports.up = function(knex) {
   .createTable('briana', table => {
     table.increments('id');
     table.string('eventTitle').notNullable();
-    table.string('date').notNullable();
-    table.string('time').notNullable();
+    table.string('startDate').notNullable();
+    table.string('startTime').notNullable();
+    table.string('endDate').notNullable();
+    table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability')
@@ -44,5 +52,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists('users').dropTableIfExists('Anna').dropTableIfExists('Roemello').dropTableIfExists('Felix').dropTableIfExists('Briana');
+  return knex.schema.dropTableIfExists('users').dropTableIfExists('anna').dropTableIfExists('roemello').dropTableIfExists('felix').dropTableIfExists('briana');
 };

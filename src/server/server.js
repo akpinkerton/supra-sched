@@ -14,6 +14,10 @@ app.get('/', function (req, res) {
   knex
     .select('*')
     .from('anna')
+    .orderBy('startDate', 'ACS')
+    .orderBy('startTime', 'ASC')
+    .orderBy('endTime', 'ASC')
+    .orderBy('endDate', 'ACS')
     .then(data => res.status(200).json(data))
     .catch(err =>
       res.status(404).json({
@@ -28,14 +32,23 @@ app.post('/', function (req, res) {
   knex('anna')
     .insert({
       eventTitle: req.body.event,
-      date: req.body.date,
-      time: req.body.time,
+      startDate: req.body.startDate,
+      startTime: req.body.startTime,
+      endDate: req.body.endDate,
+      endTime: req.body.endTime,
       type: req.body.type,
       location: req.body.location,
-      availability: 'false' //WILL ADD req.body.avail 
+      availability: 'busy' //WILL ADD req.body.avail
     })
     .then(data => res.status(200).json(data))
 });
+
+app.delete('/', function (req, res) {
+  knex('anna')
+    .del()
+    .where({id : req.body.id})
+    .then(data => res.status(200).json(data))
+})
 
 
 
