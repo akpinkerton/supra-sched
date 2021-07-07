@@ -28,12 +28,19 @@ console.log("Inputs: ", inputsRetrieved.type)
 
   return (
     <div className="container">
-          {inputsRetrieved.filter(inputs => inputs.type === "Task").map(taskInput =>
-              <div>
+          {inputsRetrieved.filter(inputs => inputs.type === "task").map(taskInput =>
+                     <div class="tasks-container">
+                     <div class="task">
+                       <div class="task-preview">
+
                 {taskInput.eventTitle}
-                <form onSubmit={deleteTask} id={taskInput.id}><button className="btn btn-secondary" type='submit'>Delete Task</button></form>
+                <form onSubmit={deleteTask} id={taskInput.id}><button className="btn btn-warning" type='submit'><i class="fas fa-trash-alt"></i></button></form>
               </div>
+              </div>
+
+      	  	</div>
           )}
+
     </div>
   )
 }

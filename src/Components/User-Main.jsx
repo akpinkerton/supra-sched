@@ -17,11 +17,17 @@ function Main() {
 
       <div className="container-fluid event-display"><div className="row">
         <div className="col-9 cal"> <PersonalCal/> </div>
-
         <div className="col-3 tasks"><Tasks/></div>
+      </div></div>
+      <button type="button" className="btn btn-primary"> Primary</button>
+      <button type="button" className="btn btn-secondary"> Secondary</button>
+      <button type="button" className="btn btn-danger">danger</button>
+      <button type="button" className="btn btn-success"> success</button>
+      <button type="button" className="btn btn-warning"> warning</button>
+      <button type="button" className="btn btn-dark"> dark</button>
+      <button type="button" className="btn btn-light"> light</button>
 
-        </div>
-      </div>
+
     </div>
   )
 }

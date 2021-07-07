@@ -12,8 +12,13 @@ function InputModal() {
   const [endDate, setEndDate] = useState('')
   const [endTime, setEndTime] = useState('')
   const [location, setLocation] = useState('')
-  const [availability, setavailability] = useState('')
-  const [attendees, setAttendees] = useState([])
+  const [availability, setAvailability] = useState('')
+  const [attendees, setAttendees] = useState({
+    Anna: false,
+    Mello: false,
+    Briana: false,
+    Felix: false
+  })
 
   const [inputs, setInputs] = useState({})
 
@@ -46,7 +51,7 @@ function InputModal() {
   }
 
   function handleAvail(e) {
-    setavailability(e.target.id)
+    setAvailability(e.target.id)
   }
 
   function handleAttendees(e) {
@@ -64,7 +69,9 @@ function InputModal() {
       location:location,
       availability: availability,
       attendees:attendees})
-    console.log(inputs);
+    console.log("Type: ", inputs.type);
+    console.log("Avail: ", inputs.availability);
+
   }
   useEffect(() => {
     function postInputs(){
@@ -86,7 +93,7 @@ function InputModal() {
   return (
     <div className="container">
 
-    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventInput"> Add Event</button>
+    <button type="button" className="btn-hover add-event" data-bs-toggle="modal" data-bs-target="#eventInput"><i class="fas fa-plus"></i>    Add Event</button>
 
     <div className="modal" id="eventInput" aria-labelledby="eventInputLabel" aria-hidden="true">
       <div className="modal-dialog">
@@ -101,8 +108,8 @@ function InputModal() {
               <form>
 
                 <div className="btn-group btn-group-toggle" data-toggle="buttons" onChange={handleType} >
-                  <label class="btn btn-secondary active"><input type="radio" name="options" id="Event"/> Event </label>
-                  <label class="btn btn-secondary"><input type="radio" name="options" id="Task"/> Task </label>
+                  <label class="btn btn-secondary active"><input type="radio" name="options" id="event"/> Event </label>
+                  <label class="btn btn-secondary"><input type="radio" name="options" id="task"/> Task </label>
                 </div>
 
                 <input className="form-control mt-3" type='text' placeholder='Event Title...' onChange={handleEvent} value={event} />
@@ -124,23 +131,32 @@ function InputModal() {
 
                 <input className="form-control mt-3" type='text' placeholder='Location...' onChange={handleLocation} value={location} />
 
-                <div className="btn-group btn-group-toggle mt-3" data-toggle="buttons" onChange={handleAvail} >
-                  <label class="btn btn-secondary active"><input type="radio" name="availability" id="Busy" checked/> Busy </label>
-                  <label class="btn btn-secondary"><input type="radio" name="availability" id="Free"/> Free </label>
+
+                <div className="btn-group btn-group-toggle" data-toggle="buttons" onChange={handleAvail} >
+                  <label class="btn btn-secondary active"><input type="radio" name="avail" id="Busy"/> Busy </label>
+                  <label class="btn btn-secondary"><input type="radio" name="avail" id="Free"/> Free </label>
                 </div>
 
-                <div className="col-md-12 mt-3" >
-                    <input type="checkbox" name="user" id="Anna" onChange={handleAttendees}/>
-                    <label for="anna">Anna</label>
+                <div className="col-md-12 d-flex justify-content-around" >
+                <input type="checkbox" className="btn-check" name="category" onChange={() => {
+                  setAttendees({ ...attendees, anna: !attendees.anna })
+                }} id="anna" />
+                <label className="btn btn-primary" for="anna">anna</label>
 
-                    <input type="checkbox" name="user" id="Mello" onChange={handleAttendees}/>
-                    <label for="mello">Mello</label>
+                <input type="checkbox" className="btn-check" onChange={() => {
+                  setAttendees({ ...attendees, briana: !attendees.briana })
+                }} name="category" id="briana" />
+                <label className="btn btn-primary" for="briana">briana</label>
 
-                    <input type="checkbox" name="user" id="Briana" onChange={handleAttendees}/>
-                    <label for="briana">Briana</label>
+                <input type="checkbox" className="btn-check" onChange={() => {
+                  setAttendees({ ...attendees, felix: !attendees.felix })
+                }} name="category" id="felix" />
+                <label className="btn btn-primary" for="felix">felix</label>
 
-                    <input type="checkbox" name="user" id="Felix" onChange={handleAttendees}/>
-                    <label for="felix">Felix</label>
+                <input type="checkbox" className="btn-check" onChange={() => {
+                  setAttendees({ ...attendees, mello: !attendees.mello })
+                }} name="category" id="mello" />
+                <label className="btn btn-primary" aria-pressed="true" for="mello">mello</label>
                 </div>
               </form>
           </div>

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Moment from 'react-moment';
+import '../css/display.css'
 
 function PersonalCal() {
 
@@ -25,16 +27,29 @@ function PersonalCal() {
 
   return (
     <div className="container">
+
       {events.filter(inputs => inputs.type === "event")
       .map(event =>
-        <div>
-          <div>{event.eventTitle}</div>
-          <div> {event.startDate} {event.startTime}</div>
-          <div>{event.endDate} {event.endTime}</div>
-          <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-secondary" type='submit'>Delete Task</button></form>
-          <br/>
-        </div>
+          <div class="event" id={event.availability}>
+            <div class="event-preview" id={event.availability}>
+              <h6><Moment format="DD MMMM">{event.startDate}</Moment></h6>
+              <h3>{event.startTime}</h3>
+
+      	  	</div>
+
+            <div class="container d-flex event-info">
+              <div className="col-8">
+                <h5>{event.location}</h5>
+                <h2>{event.eventTitle}</h2>
+              </div>
+              <div className="col-8">
+              <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-danger" type='submit'>Delete Event</button></form>
+              </div>
+            </div>
+	        </div>
       )}
+
+
     </div>
   )
 }
