@@ -33,7 +33,7 @@ function PersonalCal() {
           <div className="event" id={event.availability}>
             <div className="event-preview" id={event.availability}>
               <h6><Moment format="DD MMMM">{event.startDate}</Moment></h6>
-              <h3>{event.startTime}</h3>
+              <h3>{event.startTime}<br/>{event.endTime}</h3>
 
       	  	</div>
 
