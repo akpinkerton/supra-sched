@@ -8,7 +8,6 @@ function Tasks() {
     .then(res => res.json())
     .then(res => setInputsRetrieved(res))
   }
-console.log("Inputs: ", inputsRetrieved.type)
   useEffect(() => {
     getInputs();
   }, [])

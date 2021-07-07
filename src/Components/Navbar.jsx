@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -5,7 +6,12 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
 
-        <h1 className='navbar-brand'><Link to="/Home" className="nav-link"> HOME PAGE</Link></h1>
+        <h1 className='navbar-brand'>
+          <Link to="/Home" className="nav-link">
+          <img src="https://img.icons8.com/office/40/000000/new-moon.png"/>
+           Supra Schedule
+          </Link>
+        </h1>
 
 
         <ul class="navbar-nav">

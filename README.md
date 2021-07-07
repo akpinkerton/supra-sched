@@ -27,14 +27,15 @@
   - [ ] POST as logged in user
   - [X] Event name / Task
     -  Event Input Fields
-      - [ ] Date and Time
+      - [X] Date and Time
         - [ ] Blocks already scheduled time
+        - [ ] Remove or refactor initial value dates - added for ease of testing 
       - [ ] Find a time?
-      - [ ] Attendees
+      - [X] Attendees
         - [ ] Checkboxes and delete times that the attendeess unavailable
         - [ ] Refactor into a visial table that displays the day with available times for everyone
-      - [ ] Location
-      - [ ] Availability: Busy, Free
+      - [X] Location
+      - [X] Availability: Busy, Free
     - Task Input Fields
       - [ ] Due date
       - [ ] Priority: High, Weekly, Monthly, Free/Idea

@@ -1,16 +1,20 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom'; //router needed is even though not used
-import '../css/Modal.css'
-import TimePicker from './Time-Picker';
 import {modal} from 'bootstrap'
 
 
 function InputModal() {
+  const today = new Date();
+  const month = today.getMonth()+1;
+  const day = today.getDate();
+  const year = today.getFullYear();
+  const newDate = `${year}-${month}-${day}`
+  console.log(`Today's reformattted date: ${year}-${month}-${day}`)
   const [type, setType] = useState ('')
   const [event, setEvent] = useState('')
-  const [startDate, setStartDate] = useState('')
+  const [startDate, setStartDate] = useState('2021-07-06')
   const [startTime, setStartTime] = useState('07:00')
-  const [endDate, setEndDate] = useState('')
+  const [endDate, setEndDate] = useState('2021-07-16')
   const [endTime, setEndTime] = useState('17:00')
   const [location, setLocation] = useState('')
   const [availability, setAvailability] = useState('')
@@ -68,7 +72,8 @@ function InputModal() {
       attendees:attendees})
     console.log("Type: ", inputs.type);
     console.log("Avail: ", inputs.availability);
-    console.log("Attendees: ", inputs.attendees)
+    console.log("Attendees: ", inputs.attendees);
+    console.log("Start Date Entered: ", inputs.startDate)
   }
   useEffect(() => {
     function postInputs(){
@@ -130,8 +135,6 @@ function InputModal() {
                   <input className="form-control" type='date' onChange={handleEndDate} value={endDate} />
                   <input className="form-control" type='time' onChange={handleEndTime} value={endTime} />
                 </div>
-
-                {/* <TimePicker/> */}
 
                 <div className='container-fluid d-flex mt-3'>
                   <p className="col-2">Location:</p>
