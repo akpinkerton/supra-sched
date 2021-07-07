@@ -20,21 +20,27 @@ function TimeSelector() {
       .then(res => setBusyArray(res))
   }
 
+  function setTime(e){
+    window.sessionStorage.setItem('time', e.target.id)
+  }
+
   console.log("Busy Array: ", busyArray)
 
-  const busy = busyArray.map(events => events.startTime);
+  let busy = [];
+  busyArray.map(events => busy.push(events.startTime));
+  console.log("Busy: ", busy)
 
   return (
-    <div className="container d-flex flex-wrap justify-content-center">
+    <div className="container mt-3 d-flex flex-wrap justify-content-around ">
       {timesArray.map(time =>
-        <button style={{ backgroundColor:
-        time === busy ? '#008000' : '#9a0000' }}>
-          {time}
+      <div className="mt-1 time-selector" >
 
-        </button>
+        <input type='radio' className='btn-check' name='times' id={time} onClick={setTime}/>
 
-      )}
-       {busy}
+        <label style={{ backgroundColor: busy.includes(time) ? '#9a0000' : '#008000', pointerEvents: busy.includes(time) ? 'none' : 'auto'}} className='btn btn-time' for={time}>{time}</label>
+
+      </div>)}
+
     </div>
   )
 }

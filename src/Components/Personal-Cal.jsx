@@ -30,18 +30,18 @@ function PersonalCal() {
 
       {events.filter(inputs => inputs.type === "event")
       .map(event =>
-          <div class="event" id={event.availability}>
-            <div class="event-preview" id={event.availability}>
+          <div className="event" id={event.availability}>
+            <div className="event-preview" id={event.availability}>
               <h6><Moment format="DD MMMM">{event.startDate}</Moment></h6>
               <h3>{event.startTime}</h3>
 
       	  	</div>
 
-            <div class="container d-flex event-info" id={event.availability}>
+            <div className="container d-flex event-info" id={event.availability}>
               <div className="col-5">
                 <h5>{event.location}</h5>
                 <h2>{event.eventTitle}</h2>
-                  <span>{`${Object.keys(event.attendees)}`} </span> 
+                  <span>{`${Object.keys(event.attendees)}`} </span>
               </div>
 
               <div className="col-5">

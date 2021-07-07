@@ -16,7 +16,7 @@ function InputModal() {
   const [startDate, setStartDate] = useState('2021-07-06')
   const [startTime, setStartTime] = useState('07:00')
   const [endDate, setEndDate] = useState('2021-07-16')
-  const [endTime, setEndTime] = useState('17:00')
+  const [duration, setDuration] = useState('Duration')
   const [location, setLocation] = useState('')
   const [availability, setAvailability] = useState('')
   const [attendees, setAttendees] = useState({
@@ -25,6 +25,7 @@ function InputModal() {
     Briana: false,
     Felix: false
   })
+  let endTime = ''
 
   const [inputs, setInputs] = useState({})
 
@@ -48,8 +49,15 @@ function InputModal() {
     setEndDate(e.target.value)
   }
 
-  function handleEndTime(e) {
-    setEndTime(e.target.value)
+  function handleDuration(e) {
+    setDuration(e.target.id)
+    setEndTime();
+  }
+
+  function setEndTime() {
+    if(duration === '30 min'){
+      console.log(parseInt(startTime))
+    }
   }
 
   function handleLocation(e) {
@@ -65,7 +73,7 @@ function InputModal() {
       type:type,
       event:event,
       startDate:startDate,
-      startTime:startTime,
+      startTime:window.sessionStorage.getItem('time'),
       endDate: endDate,
       endTime: endTime,
       location:location,
@@ -75,6 +83,7 @@ function InputModal() {
     console.log("Avail: ", inputs.availability);
     console.log("Attendees: ", inputs.attendees);
     console.log("Start Date Entered: ", inputs.startDate)
+    console.log(window.sessionStorage.getItem('time'))
   }
   useEffect(() => {
     function postInputs(){
@@ -96,7 +105,7 @@ function InputModal() {
   return (
     <div className="container">
 
-    <button type="button" className="btn-hover add-event" data-bs-toggle="modal" data-bs-target="#eventInput"><i class="fas fa-plus"></i>    Add Event</button>
+    <button type="button" className="btn-hover add-event" data-bs-toggle="modal" data-bs-target="#eventInput"><i className= "fas fa-plus"></i>    Add Event</button>
 
     <div className="modal" id="eventInput" aria-labelledby="eventInputLabel" aria-hidden="true">
       <div className="modal-dialog">
@@ -121,22 +130,32 @@ function InputModal() {
 
                 <div className='container-fluid d-flex mt-3'>
                   <p className="col-2">Event:</p>
-                  <input className="form-control" type='text' placeholder='Event Title...' onChange={handleEvent} value={event} />
+                  <input className="form-control action-event" type='text' placeholder='Event Title...' onChange={handleEvent} value={event} />
                 </div>
 
 
                 <div className='container-fluid d-flex mt-3'>
                   <p className="col-2">Start:</p>
-                  <input className="form-control" type='date' onChange={handleStartDate} value={startDate} />
-                  <input className="form-control" type='time' onChange={handleStartTime} value={startTime} />
+                  <input className="form-control action-start" type='date' onChange={handleStartDate} value={startDate} />
                 </div>
 
   <TimeSelector/>
-  
+
                 <div className='container-fluid d-flex mt-3'>
                   <p className="col-2">End:</p>
                   <input className="form-control" type='date' onChange={handleEndDate} value={endDate} />
-                  <input className="form-control" type='time' onChange={handleEndTime} value={endTime} />
+                  {/* <input className="form-control" type='time' onChange={handleEndTime} value={endTime} /> */}
+                  <div className= "dropdown">
+                    <button className= "btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {duration}
+                    </button>
+                    <ol className= "dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li className= "dropdown-item" id='30 min' onClick={handleDuration}>30 min</li>
+                      <li className= "dropdown-item" id='1 hr' onClick={handleDuration}>1 hr</li>
+                      <li className= "dropdown-item" id='1 hr 30 min' onClick={handleDuration}>1 hr 30 min</li>
+                      <li className= "dropdown-item" id='2 hr' onClick={handleDuration}>2 hrs</li>
+                    </ol>
+                  </div>
                 </div>
 
                 <div className='container-fluid d-flex mt-3'>
