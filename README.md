@@ -20,15 +20,19 @@
   - Home (log in)
   - Personal Calendar
   - Unit Calendar
+
 - [ ] Home Page
   - [ ] login
-  - [X] once logged in, display personal calendar with a create event button
+  - [X] once logged in, display personal calendar with a create event
+  button
+
 - [X] Add event
   - [ ] POST as logged in user
   - [X] Event name / Task
     -  Event Input Fields
       - [X] Date and Time
         - [ ] Blocks already scheduled time
+          - waiting to account for duration
         - [ ] Remove or refactor initial value dates - added for ease of testing
       - [ ] Find a time?
       - [X] Attendees
@@ -39,33 +43,37 @@
     - Task Input Fields
       - [ ] Due date
       - [ ] Priority: High, Weekly, Monthly, Free/Idea
+
 - [ ] View Personal Calendar
-  - [ ] Delete event option
+  - [X] Delete event option
   - [ ] Edit event option
+
 - [ ] View Unit Calendar
   - [ ] Search by person/people
 
 ### 🏋🏼‍♀️ Stretch goals
+  - [ ] Search options:
+    - who is working on a certain day
+    - who is working on a certain time
+    - what is an individuals schedule
+    - what is a crew's schedule
+
+  - [ ] Make location a drop down menu for common options to see availability of that area
+
   - [ ] Find a way to create table by adding a new user without having an existing ind user table created in db
+
   - [ ] APIs???
+
   - [ ] Display Unit Cal
     - [ ] Have table with member's flights/sections to be able to search by different criteria
+
   - [ ] Deploy on AWS or Heroku
 
 #### 💄 Styling
   - Bootstrap
 
-
-
-
-
-
-
-
-
-
 ###### README reqs
-  - [ ] Project Title
+  - [X] Project Title
   - [ ] Overview
   - [ ] Table of contents
   - [ ] Description
