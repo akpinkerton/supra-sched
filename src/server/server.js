@@ -55,6 +55,12 @@ app.post('/', function (req, res) {
       attendees: req.body.attendees
     })
     .then(data => res.status(200).json(data))
+    .catch(err => {
+  res.status(404).json({
+    message:
+      'The data you are looking for could not be found. Please try again'
+    })
+  })
 });
 
 app.delete('/', function (req, res) {
