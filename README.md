@@ -3,9 +3,9 @@
 ## Requirements
   - [ ] ERD
   - [ ] Test using Cypress and Jest / React Testing Lib
-  - [ ] SPA using React
-  - [ ] Server - Express
-  - [ ] SQL - Postgres
+  - [X] SPA using React
+  - [X] Server - Express
+  - [X] SQL - Postgres
 
 ### ✅ Initial Must Dos
 - [X] Input a meeting/timeblock
@@ -29,7 +29,7 @@
     -  Event Input Fields
       - [X] Date and Time
         - [ ] Blocks already scheduled time
-        - [ ] Remove or refactor initial value dates - added for ease of testing 
+        - [ ] Remove or refactor initial value dates - added for ease of testing
       - [ ] Find a time?
       - [X] Attendees
         - [ ] Checkboxes and delete times that the attendeess unavailable
@@ -52,8 +52,8 @@
     - [ ] Have table with member's flights/sections to be able to search by different criteria
   - [ ] Deploy on AWS or Heroku
 
-#### 💄 Styling Points
-  - [ ] Bootstrap
+#### 💄 Styling
+  - Bootstrap
 
 
 
