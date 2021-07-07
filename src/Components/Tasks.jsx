@@ -29,9 +29,9 @@ console.log("Inputs: ", inputsRetrieved.type)
   return (
     <div className="container">
           {inputsRetrieved.filter(inputs => inputs.type === "task").map(taskInput =>
-                     <div class="tasks-container">
+                     <div class="">
                      <div class="task">
-                       <div class="task-preview">
+                       <div class="container-fluid d-flex task-preview flex-wrap justify-content-between">
 
                 {taskInput.eventTitle}
                 <form onSubmit={deleteTask} id={taskInput.id}><button className="btn btn-warning" type='submit'><i class="fas fa-trash-alt"></i></button></form>

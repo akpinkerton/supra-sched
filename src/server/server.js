@@ -38,7 +38,8 @@ app.post('/', function (req, res) {
       endTime: req.body.endTime,
       type: req.body.type,
       location: req.body.location,
-      availability: 'busy' //WILL ADD req.body.avail
+      availability: req.body.availability,
+      attendees: req.body.attendees
     })
     .then(data => res.status(200).json(data))
 });

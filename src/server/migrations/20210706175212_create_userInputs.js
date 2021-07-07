@@ -14,7 +14,8 @@ exports.up = function(knex) {
     table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
-    table.string('availability')
+    table.string('availability');
+    table.string('attendees')
   })
   .createTable('roemello', table => {
     table.increments('id');
@@ -25,7 +26,8 @@ exports.up = function(knex) {
     table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
-    table.string('availability')
+    table.string('availability');
+    table.string('attendees')
   })
   .createTable('felix', table => {
     table.increments('id');
@@ -36,7 +38,8 @@ exports.up = function(knex) {
     table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
-    table.string('availability')
+    table.string('availability');
+    table.string('attendees')
   })
   .createTable('briana', table => {
     table.increments('id');
@@ -47,7 +50,8 @@ exports.up = function(knex) {
     table.string('endTime').notNullable();
     table.string('type').notNullable();
     table.string('location').notNullable();
-    table.string('availability')
+    table.string('availability');
+    table.string('attendees')
   })
 };
 

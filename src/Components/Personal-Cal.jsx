@@ -37,12 +37,14 @@ function PersonalCal() {
 
       	  	</div>
 
-            <div class="container d-flex event-info">
-              <div className="col-8">
+            <div class="container d-flex event-info" id={event.availability}>
+              <div className="col-5">
                 <h5>{event.location}</h5>
                 <h2>{event.eventTitle}</h2>
+                  <span>{event.attendees}</span>
               </div>
-              <div className="col-8">
+
+              <div className="col-5">
               <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-danger" type='submit'>Delete Event</button></form>
               </div>
             </div>
