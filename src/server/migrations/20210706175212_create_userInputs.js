@@ -15,7 +15,7 @@ exports.up = function(knex) {
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability');
-    table.string('attendees')
+    table.json('attendees')
   })
   .createTable('roemello', table => {
     table.increments('id');
@@ -27,7 +27,7 @@ exports.up = function(knex) {
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability');
-    table.string('attendees')
+    table.json('attendees')
   })
   .createTable('felix', table => {
     table.increments('id');
@@ -39,7 +39,7 @@ exports.up = function(knex) {
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability');
-    table.string('attendees')
+    table.json('attendees')
   })
   .createTable('briana', table => {
     table.increments('id');
@@ -51,7 +51,7 @@ exports.up = function(knex) {
     table.string('type').notNullable();
     table.string('location').notNullable();
     table.string('availability');
-    table.string('attendees')
+    table.json('attendees')
   })
 };
 

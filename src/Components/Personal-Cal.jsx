@@ -41,7 +41,7 @@ function PersonalCal() {
               <div className="col-5">
                 <h5>{event.location}</h5>
                 <h2>{event.eventTitle}</h2>
-                  <span>{event.attendees}</span>
+                  <span>{`${Object.keys(event.attendees)}`} </span> 
               </div>
 
               <div className="col-5">

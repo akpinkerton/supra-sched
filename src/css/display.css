@@ -32,7 +32,7 @@
 .event-preview {
 	background-color: rgb(255, 118, 0);
 	color: #fff;
-	max-width: 250px;
+	min-width: 125px;
 	padding: 30px;
 }
 

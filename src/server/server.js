@@ -28,6 +28,19 @@ app.get('/', function (req, res) {
   console.log("GET req submitted")
 });
 
+app.get('/availableTimes', function (req, res) {
+  knex
+    .select('startTime', 'startDate')
+    .from('anna')
+    .where({availability: 'busy'})
+    .then(data => res.status(200).json(data))
+    .catch(err =>
+      res.status(404).json({
+        message:
+          'The data you are looking for could not be found. Please try again'
+      }))
+})
+
 app.post('/', function (req, res) {
   knex('anna')
     .insert({

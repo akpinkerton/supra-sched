@@ -154,22 +154,22 @@ function InputModal() {
                 <input type="checkbox" className="btn-check" name="attendee" onChange={() => {
                   setAttendees({ ...attendees, anna: !attendees.anna })
                 }} id="anna" />
-                <label className="btn btn-primary" for="anna">anna</label>
+                <label className="btn btn-primary" for="anna">Anna</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setAttendees({ ...attendees, briana: !attendees.briana })
                 }} name="attendee" id="briana" />
-                <label className="btn btn-primary" for="briana">briana</label>
+                <label className="btn btn-primary" for="briana">Briana</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setAttendees({ ...attendees, felix: !attendees.felix })
                 }} name="attendee" id="felix" />
-                <label className="btn btn-primary" for="felix">felix</label>
+                <label className="btn btn-primary" for="felix">Felix</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setAttendees({ ...attendees, mello: !attendees.mello })
                 }} name="attendee" id="mello" />
-                <label className="btn btn-primary" aria-pressed="true" for="mello">mello</label>
+                <label className="btn btn-primary" aria-pressed="true" for="mello">Mello</label>
                 </div>
               </form>
           </div>
