@@ -17,3 +17,4 @@ test('Renders Login Link', () => {
   const linkElement = screen.getByText(/Hi, what's your name?/i);
   expect(linkElement).toBeInTheDocument();
 });
+
