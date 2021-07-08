@@ -126,7 +126,7 @@ function InputModal() {
   }
 
   function postInputs() {
-    fetch("http://localhost:3001/", {
+    fetch("http://localhost:3002/events/", {
       method: "POST",
       body: JSON.stringify(inputs),
       headers: {

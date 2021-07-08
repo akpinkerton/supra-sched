@@ -15,7 +15,7 @@ function TimeSelector() {
   }, [])
 
   async function getBusyTimes() {
-    await fetch('http://localhost:3001/availableTimes')
+    await fetch('http://localhost:3002/availableTimes')
       .then(res => res.json())
       .then(res => setBusyArray(res))
   }

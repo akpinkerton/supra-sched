@@ -4,7 +4,7 @@ function Tasks() {
   const[inputsRetrieved, setInputsRetrieved] = useState([]);
 
   async function getInputs() {
-    await fetch('http://localhost:3001/')
+    await fetch('http://localhost:3002/events')
     .then(res => res.json())
     .then(res => setInputsRetrieved(res))
   }
@@ -14,7 +14,7 @@ function Tasks() {
 
   function deleteTask(e) {
     console.log('DELETE')
-    fetch('http://localhost:3001/', {
+    fetch('http://localhost:3002/events', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: e.target.id})

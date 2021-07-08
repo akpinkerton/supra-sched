@@ -7,17 +7,17 @@ function PersonalCal() {
   const[events, setEvents] = useState([]);
 
   async function getEvents() {
-    await fetch('http://localhost:3001/')
+    await fetch('http://localhost:3002/events')
     .then(res => res.json())
     .then(res => setEvents(res))
   }
 
   function deleteEvent(e) {
     console.log('DELETE')
-    fetch('http://localhost:3001/', {
+    fetch('http://localhost:3002/events', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: e.target.id})
+      body: JSON.stringify({ id: e.target.id, name: e.target.name})
     })
   }
 
@@ -45,7 +45,7 @@ function PersonalCal() {
                   </div>
               </div>
               <div className="container text-right">
-              <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-info mt-1" type='submit'>Delete Event</button></form>
+              <form onSubmit={deleteEvent} id={event.id} name={event.eventTitle}><button className="btn btn-info mt-1" type='submit'>Delete Event</button></form>
               </div>
             </div>
 	        </div>
