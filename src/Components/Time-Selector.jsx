@@ -24,11 +24,11 @@ function TimeSelector() {
     window.sessionStorage.setItem('time', e.target.value)
   }
 
-  console.log("Busy Array: ", busyArray)
+  //console.log("Busy Array: ", busyArray)
 
   let busy = [];
   busyArray.map(events => busy.push(events.startTime));
-  console.log("Busy aka Start Time: ", busy)
+  //console.log("Busy aka Start Time: ", busy)
 
   return (
     <div className="container mt-3 d-flex flex-wrap justify-content-around ">

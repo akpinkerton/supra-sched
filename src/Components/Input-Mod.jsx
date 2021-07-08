@@ -21,6 +21,7 @@ function InputModal() {
   const [location, setLocation] = useState('Office')
   const [availability, setAvailability] = useState('')
   const [attendees, setAttendees] = useState({})
+  const [count, setCount] = useState(0)
 
   const [inputs, setInputs] = useState({})
 
@@ -72,12 +73,14 @@ function InputModal() {
     } else if (duration === '2 hr') {
       stringEndTime = parseInt(window.sessionStorage.getItem('time')) + 120;
     }
-    setEndTime(convertTime(stringEndTime))
+    const converted = convertTime(stringEndTime);
+    setEndTime(converted)
     console.log('endTime:', endTime)
   }
 
   function convertTime(timeToConvert) {
     let results = timeToConvert / 60;
+    console.log('time to conver: ', timeToConvert)
     console.log('results: ', results)
     let timeString = results.toString();
     if (results < 10) {
@@ -238,7 +241,7 @@ function InputModal() {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" className="btn btn-success">Submit</button>
+                  <button type="submit" className="btn btn-success" onClick={() =>(count + 1)}>Submit</button>
                 </div>
               </form>
             </div>
