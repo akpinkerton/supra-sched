@@ -72,14 +72,12 @@ function InputModal() {
     } else if (duration === '2 hr') {
       stringEndTime = parseInt(window.sessionStorage.getItem('time')) + 120;
     }
-    const converted = convertTime(stringEndTime);
-    setEndTime(converted)
+    setEndTime(convertTime(stringEndTime))
     console.log('endTime:', endTime)
   }
 
   function convertTime(timeToConvert) {
     let results = timeToConvert / 60;
-    console.log('time to conver: ', timeToConvert)
     console.log('results: ', results)
     let timeString = results.toString();
     if (results < 10) {
@@ -240,6 +238,10 @@ function InputModal() {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
+<<<<<<< HEAD
+=======
+                  <button type="submit" className="btn btn-success">Submit</button>
+>>>>>>> d607ab3d5b694fcc876a2292d5fe2c02cc22c3ac
                 </div>
               </form>
             </div>
