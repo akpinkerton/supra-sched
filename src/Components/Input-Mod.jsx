@@ -11,7 +11,7 @@ function InputModal() {
   const year = today.getFullYear();
   const newDate = `${year}-${month}-${day}`
   // console.log(`Today's reformattted date: ${year}-${month}-${day}`)
-  const [type, setType] = useState('')
+  const [type, setType] = useState('event')
   const [event, setEvent] = useState('')
   const [startDate, setStartDate] = useState('2021-07-06')
   const [startTime, setStartTime] = useState('07:00')
@@ -19,7 +19,7 @@ function InputModal() {
   const [endTime, setEndTime] = useState('08:00')
   const [duration, setDuration] = useState('Duration')
   const [location, setLocation] = useState('Office')
-  const [availability, setAvailability] = useState('')
+  const [availability, setAvailability] = useState('busy')
   const [attendees, setAttendees] = useState({})
 
   const [inputs, setInputs] = useState({})
@@ -72,11 +72,13 @@ function InputModal() {
     } else if (duration === '2 hr') {
       stringEndTime = parseInt(window.sessionStorage.getItem('time')) + 120;
     }
-    setEndTime(convertTime(stringEndTime))
-    console.log('endTime:', endTime)
+    const convertedTime = convertTime(stringEndTime)
+    setEndTime(convertedTime)
   }
+  console.log('endTime:', endTime)
 
   function convertTime(timeToConvert) {
+    console.log("Convert Time: ", timeToConvert)
     let results = timeToConvert / 60;
     console.log('results: ', results)
     let timeString = results.toString();
