@@ -31,7 +31,6 @@ function InputModal() {
   }, [inputs])
 
   function handleType(e) {
-   // e.preventDefault()
     console.log('type', type)
     setType(e.target.id)
   }
@@ -44,11 +43,6 @@ function InputModal() {
   function handleStartDate(e) {
     e.preventDefault()
     setStartDate(e.target.value)
-  }
-
-  function handleStartTime(e) {
-    e.preventDefault()
-    setStartTime(e.target.value)
   }
 
   function handleEndDate(e) {
@@ -109,7 +103,6 @@ function InputModal() {
   }
 
   function handleSubmit(e) {
-    //e.preventDefault()
     setInputs({
       type: type,
       event: event,
@@ -123,7 +116,7 @@ function InputModal() {
     })
     postInputs();
     if (duration === '1 hr') {
-
+      /// SHOULD THERE BE STUFF HERE???
     }
     console.log("Type: ", inputs.type);
     console.log("Avail: ", inputs.availability);

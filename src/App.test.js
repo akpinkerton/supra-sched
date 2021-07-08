@@ -3,7 +3,6 @@ import '@testing-library/jest-dom/extend-expect';
 import Login from './Components/Login';
 import App from './App';
 import Navbar from './Components/Navbar';
-import User-Main from './Components/User-Main'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 test('Renders Navbar Link', () => {
