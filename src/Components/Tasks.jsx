@@ -27,7 +27,7 @@ function Tasks() {
 
   return (
 
-  <div class="container tasks py-3">
+  <div class="container tasks">
 		<h1 className="border-bottom">Your Tasks </h1>
       {inputsRetrieved.filter(inputs => inputs.type === "task").map(taskInput =>
         <form className="container-fluid justify-content-left p-0" onSubmit={deleteTask} id={taskInput.id}>

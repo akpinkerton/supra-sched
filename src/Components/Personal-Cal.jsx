@@ -27,13 +27,10 @@ function PersonalCal() {
 
   return (
     <div className="container pers-cal">
-
+      <h1 className="border-bottom">Your Events </h1>
       {events.filter(inputs => inputs.type === "event")
       .map(event =>
           <div className="event" id={event.availability}>
-
-
-
             <div className="container-fluid event-side-color col-3" id={event.availability}>
               <span className='event-date'><Moment format="DD MMMM">{event.startDate}</Moment></span>
               <div className='event-time'>{`${event.startTime} - ${event.endTime}`}</div>
