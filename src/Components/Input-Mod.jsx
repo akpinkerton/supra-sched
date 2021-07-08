@@ -11,7 +11,7 @@ function InputModal() {
   const year = today.getFullYear();
   const newDate = `${year}-${month}-${day}`
   // console.log(`Today's reformattted date: ${year}-${month}-${day}`)
-  const [type, setType] = useState('')
+  const [type, setType] = useState('event')
   const [event, setEvent] = useState('')
   const [startDate, setStartDate] = useState('2021-07-06')
   const [startTime, setStartTime] = useState('07:00')
@@ -19,9 +19,8 @@ function InputModal() {
   const [endTime, setEndTime] = useState('08:00')
   const [duration, setDuration] = useState('Duration')
   const [location, setLocation] = useState('Office')
-  const [availability, setAvailability] = useState('')
+  const [availability, setAvailability] = useState('busy')
   const [attendees, setAttendees] = useState({})
-  const [count, setCount] = useState(0)
 
   const [inputs, setInputs] = useState({})
 
@@ -241,7 +240,6 @@ function InputModal() {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" className="btn btn-success" onClick={() =>(count + 1)}>Submit</button>
                 </div>
               </form>
             </div>
