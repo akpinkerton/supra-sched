@@ -145,9 +145,9 @@ function InputModal() {
 
 
   return (
-    <div className="container">
+    <div className="container m-4">
 
-      <button type="button" className="btn-hover add-event" data-bs-toggle="modal" data-bs-target="#eventInput"><i className="fas fa-plus"></i>    Add Event</button>
+      <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eventInput"><i className="fas fa-plus"></i>    Add Event</button>
 
       <div className="modal" id="eventInput" aria-labelledby="eventInputLabel" aria-hidden="true">
         <div className="modal-dialog">
@@ -163,10 +163,10 @@ function InputModal() {
 
                 <div className="container btn-group btn-group-toggle mt-3" data-toggle="buttons">
                   <input type="radio" className="btn-check" name="options" id="event" onClick={handleType} />
-                  <label className="btn btn-secondary" for="event">Event</label>
+                  <label className="btn btn-warning" for="event">Event</label>
 
                   <input type="radio" className="btn-check" name="options" id="task" onClick={handleType} />
-                  <label className="btn btn-secondary" for="task">Task</label>
+                  <label className="btn btn-warning" for="task">Task</label>
                 </div>
 
 
@@ -188,7 +188,7 @@ function InputModal() {
                   <input className="form-control" type='date' onChange={handleEndDate} value={endDate} />
                   {/* <input className="form-control" type='time' onChange={handleEndTime} value={endTime} /> */}
                   <div className="dropdown">
-                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {duration}
                     </button>
                     <ol className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -207,10 +207,10 @@ function InputModal() {
 
                 <div className="container btn-group btn-group-toggle mt-3" data-toggle="buttons" onChange={handleAvail} >
                   <input type="radio" className="btn-check" name="availability" id="busy" />
-                  <label className="btn btn-secondary" for="busy">Busy</label>
+                  <label className="btn btn-warning" for="busy">Busy</label>
 
                   <input type="radio" className="btn-check" name="availability" id="free" />
-                  <label className="btn btn-secondary" for="free">Free</label>
+                  <label className="btn btn-warning" for="free">Free</label>
                 </div>
 
 
@@ -218,25 +218,23 @@ function InputModal() {
                   <input type="checkbox" className="btn-check" name="attendee" onChange={() => {
                     setAttendees({ ...attendees, Anna: !attendees.Anna })
                   }} id="Anna" />
-                  <label className="btn btn-primary" for="Anna">Anna</label>
+                  <label className="btn btn-danger" for="Anna">Anna</label>
 
                   <input type="checkbox" className="btn-check" onChange={() => {
                     setAttendees({ ...attendees, Briana: !attendees.Briana })
                   }} name="attendee" id="Briana" />
-                  <label className="btn btn-primary" for="Briana">Briana</label>
+                  <label className="btn btn-danger" for="Briana">Briana</label>
 
                   <input type="checkbox" className="btn-check" onChange={() => {
                     setAttendees({ ...attendees, Felix: !attendees.Felix })
                   }} name="attendee" id="Felix" />
-                  <label className="btn btn-primary" for="Felix">Felix</label>
+                  <label className="btn btn-danger" for="Felix">Felix</label>
 
                   <input type="checkbox" className="btn-check" onChange={() => {
                     setAttendees({ ...attendees, Mello: !attendees.Mello })
                   }} name="attendee" id="Mello" />
-                  <label className="btn btn-primary" aria-pressed="true" for="Mello">Mello</label>
+                  <label className="btn btn-danger" aria-pressed="true" for="Mello">Mello</label>
                 </div>
-
-
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>

@@ -1,12 +1,19 @@
-/* WHOLE CONTAINER  */
+
+.page {
+	background: linear-gradient(180deg, transparent 30%, #ff2f002c);
+	padding: 50px 0;
+	height: 100vh;
+}
+
+/* WHOLE EVENTS CONTAINER  */
 .event {
-	background-color: #fff;
 	border-radius: 10px;
 	display: flex;
 	margin: 10px;
 	overflow: hidden;
 	letter-spacing: 1px;
 	min-width: 650px;
+
 }
 
 .event#free {
@@ -15,7 +22,7 @@
 
 /* SIDE COLOR PORTION */
 .event-side-color {
-	background-color: rgb(255, 118, 0);
+	background-color: #1B337E;
 	color: #fff;
 	align-items: center;
 	min-width: 200px;
@@ -28,43 +35,40 @@ font-size: 75%;
 }
 
 .event-side-color#free{
-	background-color: #2A265F;
+	background-color: #080f23;
 }
 
 /* MAIN CONTENT PORTION */
 .event-info{
+	background-color: #CCD8E0;
+	color:#080f23;
 	margin: 0;
 }
 
  .event-info .event-title {
-  color:black;
 	text-transform: uppercase;
 }
 
 .event-info .details{
 	font-size: 75%;
+	opacity: 0.4;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.task-preview {
-	background-color: #2A265F;
-	align-items: center;
-	border-radius: 10px;
-	margin: 10px 0px;
-	overflow: hidden;
-	color: #fff;
-	padding: 10px;
+.ind-task .btn {
+	max-height: 30px;
+	padding: 0;
+	margin: 10px 0;
 }
 
+.tasks input {
+  width: 20px;
+  height: 20px;
+	margin: 5px;
+	cursor: pointer;
+}
 
+.tasks input:checked + label {
+	text-decoration: line-through;
+	color: hsla(0, 0%, 70%, 0.678);
+}
 

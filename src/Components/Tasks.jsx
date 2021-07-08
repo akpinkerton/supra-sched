@@ -26,21 +26,20 @@ function Tasks() {
   }, [])
 
   return (
-    <div className="container">
-          {inputsRetrieved.filter(inputs => inputs.type === "task").map(taskInput =>
-                     <div className="">
-                     <div className="task">
-                       <div className="container-fluid d-flex task-preview flex-wrap justify-content-between">
 
-                {taskInput.eventTitle}
-                <form onSubmit={deleteTask} id={taskInput.id}><button className="btn btn-warning" type='submit'><i className="fas fa-trash-alt"></i></button></form>
-              </div>
-              </div>
+  <div class="container tasks py-3">
+		<h1 className="border-bottom">Your Tasks </h1>
+      {inputsRetrieved.filter(inputs => inputs.type === "task").map(taskInput =>
+        <form className="container-fluid justify-content-left p-0" onSubmit={deleteTask} id={taskInput.id}>
+          <div className="col-md-12 d-flex justify-content-between my-2 ind-task" >
+            <input className="col-2" type="checkbox" id={taskInput.id} name={taskInput.id}/>
+            <label className="col-8" for={taskInput.id}>{taskInput.eventTitle}</label>
+            <button className="col-2 btn" type='submit'><i style={{color: '#497081'}}className="fas fa-trash-alt"></i></button>
+          </div>
+        </form>
+      )}
+  </div>
 
-      	  	</div>
-          )}
-
-    </div>
   )
 }
 

@@ -7,17 +7,18 @@ import Tasks from './Tasks';
 
 function Main() {
 
-  return (
-    <div className="container-fluid page justify-content-between">
+  return (<>
+    <div className="container-fluid page">
 
       <InputModal/>
 
-      <div className="container-fluid event-display"><div className="row">
-        <div className="col-9 cal"> <PersonalCal/> </div>
-        <div className="col-3 tasks"><Tasks/></div>
-      </div></div>
+      <div className="container-fluid justify-content-between d-flex flex-wrap">
+        <div className="col-9"> <PersonalCal/> </div>
+        <div className="col-3"><Tasks/></div>
+      </div>
     </div>
-  )
+
+  </>)
 }
 
 export default Main;

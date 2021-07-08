@@ -26,7 +26,7 @@ function PersonalCal() {
   }, [])
 
   return (
-    <div className="container">
+    <div className="container pers-cal">
 
       {events.filter(inputs => inputs.type === "event")
       .map(event =>
@@ -48,7 +48,7 @@ function PersonalCal() {
                   </div>
               </div>
               <div className="container text-right">
-              <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-danger mt-1" type='submit'>Delete Event</button></form>
+              <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-info mt-1" type='submit'>Delete Event</button></form>
               </div>
             </div>
 	        </div>

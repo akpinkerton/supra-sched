@@ -8,8 +8,7 @@ const Navbar = () => {
 
         <h1 className='navbar-brand'>
           <Link to="/Home" className="nav-link">
-          <img src="https://img.icons8.com/office/40/000000/new-moon.png"/>
-           Supra Schedule
+          <img src="https://fontmeme.com/permalink/210708/bd7e34d2e5c601e9097fb2da1c27629b.png" alt="star-trek-font" border="0"/>
           </Link>
         </h1>
 
