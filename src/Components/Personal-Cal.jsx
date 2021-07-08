@@ -31,27 +31,28 @@ function PersonalCal() {
       {events.filter(inputs => inputs.type === "event")
       .map(event =>
           <div className="event" id={event.availability}>
-            <div className="event-preview" id={event.availability}>
-              <h6><Moment format="DD MMMM">{event.startDate}</Moment></h6>
-              <h3>{event.startTime}<br/>{event.endTime}</h3>
 
+
+
+            <div className="container-fluid event-side-color col-3" id={event.availability}>
+              <span className='event-date'><Moment format="DD MMMM">{event.startDate}</Moment></span>
+              <div className='event-time'>{`${event.startTime} - ${event.endTime}`}</div>
       	  	</div>
 
-            <div className="container d-flex event-info" id={event.availability}>
-              <div className="col-5">
-                <h5>{event.location}</h5>
-                <h2>{event.eventTitle}</h2>
-                  <span>{`${Object.keys(event.attendees)}`} </span>
+            <div className="container d-flex justify-content-between event-info" id={event.availability}>
+              <div className="row m-0 col-8">
+                  <div className='event-title'>{event.eventTitle}</div>
+                  <div className="container-fluid d-flex justify-content-between details">
+                      <span className="text-lowercase">{event.location}</span>
+                      <span>{`${Object.keys(event.attendees)}`} </span>
+                  </div>
               </div>
-
-              <div className="col-5">
-              <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-danger" type='submit'>Delete Event</button></form>
+              <div className="container text-right">
+              <form onSubmit={deleteEvent} id={event.id}><button className="btn btn-danger mt-1" type='submit'>Delete Event</button></form>
               </div>
             </div>
 	        </div>
       )}
-
-
     </div>
   )
 }
