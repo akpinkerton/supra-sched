@@ -14,17 +14,17 @@ We created a scheduling react application that allows a user to track their sche
   - Goals
 
 ## Install Instructions
-1. Fork and Clone this repo, *supra-sched*, and our server repo, *supra-sched-bend*
+1. Fork and Clone this repo, **supra-sched**, and our server repo, **supra-sched-bend**
   - Note: These repos will be combined with a 'concurrently' command soon -- stay tuned
 2. `npm install` at the root of each directory
-3. `npm start` at root of *supra-sched* to start react app on localhost 3000
-4. `npm start` at root of *supra-sched-bend* to start server on localhost 3002
-5.  In *supra-sched-bend* pull postgres from docker:
+3. `npm start` at root of **supra-sched** to start react app on localhost 3000
+4. `npm start` at root of **supra-sched-bend** to start server on localhost 3002
+5.  In **supra-sched-bend** pull postgres from docker:
   -  `docker exec -it <container-ID> bash`
   -  `psql -U postgres`
 6. Create a database called `supra-sched-db`
   - `CREATE DATABASE supra-sched-db;`
-7. Spin up knex in *supra-sched-bend*
+7. Spin up knex in **supra-sched-bend**
   - `npx knex migrate:latest` will add a table to your DB
   - `npx knex seed:run` will fill it with some initial values
 8. You can add events and tasks to your library. Specify a availability to block that time from being used for future events.
@@ -32,10 +32,10 @@ We created a scheduling react application that allows a user to track their sche
 9. On the home page, you can see all scheduled events.
 
 ### Test Install
-1. In *supra-sched-bend* create a database called `supra-sched-db_test`
+1. In **supra-sched-bend** create a database called `supra-sched-db_test`
   - `CREATE DATABASE supra-sched-db_test;`
-2. `npm test` at root of *supra-sched-bend*
-3. In *supra-sched* `npm test` at root.
+2. `npm test` at root of **supra-sched-bend**
+3. In **supra-sched** `npm test` at root.
 
 ## Usage
 
