@@ -4,11 +4,11 @@
 We created a scheduling react application that allows a user to track their schedule and personal tasks.
 
 ## Table of Contents
-- Install Instructions
-- Usage
-- Team members
-- Screen Captures
-- Planning
+- <a href='https://github.com/akpinkerton/supra-sched/blob/new-server/README.md#install-instructions'>Install Instructions</a>
+- <a href='https://github.com/akpinkerton/supra-sched/blob/new-server/README.md#usage'>Usage</a>
+- <a href='https://github.com/akpinkerton/supra-sched/blob/new-server/README.md#team-members'>Team members</a>
+- <a href='https://github.com/akpinkerton/supra-sched/blob/new-server/README.md#screen-captures'>Screen Captures</a>
+- <a href='https://github.com/akpinkerton/supra-sched/blob/new-server/README.md#planning'>Planning</a>
   - Objectives
   - Layout
   - Goals
@@ -56,13 +56,13 @@ We created a scheduling react application that allows a user to track their sche
 
 ## Team members
 
-Anna Cagle - bend setup, fend-functionality, integration testing, and styling
+👽 Anna Cagle - bend setup, fend-functionality, integration testing, and styling
 
-Briana Ausby - cypress fend testing, unit testing
+👽 Briana Ausby - cypress fend testing, unit testing
 
-Felix Zhang - cypress fend testing, unit testing
+👽 Felix Zhang - cypress fend testing, unit testing
 
-Mello McCoy - bend setup, SQL setup, fend-functionality
+👽 Mello McCoy - bend setup, SQL setup, fend-functionality
 
 ## Planning
 
