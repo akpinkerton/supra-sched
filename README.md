@@ -39,6 +39,21 @@ We created a scheduling react application that allows a user to track their sche
 
 ## Usage
 
+
+
+
+<img width="350px" align="left" src="../assets/log-in.png?raw=true"/>     <img width="350px" align="center" src="../assets/home-page.png?raw=true"/>
+
+<img width="350px" align="left" src="../assets/add-event-modal.png?raw=true"/>     <img width="350px" align="center" src="../assets/select-time-modal.png?raw=true"/>
+
+<img width="350px" align="left" src="../assets/see-available-times.png?raw=true"/>     <img width="350px" align="center" src="../assets/select-event-duration.png?raw=true"/>
+
+<img width="350px" align="left" src="../assets/availablilty.png?raw=true"/>     <img width="350px" align="center" src="../assets/Complete-tasks.png?raw=true"/>
+
+
+
+
+
 ## Team members
 
 Anna Cagle - bend setup, fend-functionality, integration testing, and styling
@@ -48,10 +63,6 @@ Briana Ausby - cypress fend testing, unit testing
 Felix Zhang - cypress fend testing, unit testing
 
 Mello McCoy - bend setup, SQL setup, fend-functionality
-
-## Screen Captures
-
-*Stay tuned*
 
 ## Planning
 
