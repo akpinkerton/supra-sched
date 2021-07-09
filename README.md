@@ -80,7 +80,7 @@
   - [ ] Installation instructions
   - [ ] Usage
   - [ ] Team members and roles
-  - [ ] Roadmap
+  - [ ] Road-map
   - [ ] Screen captures (gifs) of app in action
     - Resources on how are on Learn
 
@@ -98,7 +98,7 @@
 ###### Initial Ideas
 - Scheduler
   - Input a meeting
-  - See calander
+  - See calendar
   - Find availability for meetings
   - View schedules for a group
     - EX: Unit on shift work# supra-sched

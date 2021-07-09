@@ -17,3 +17,8 @@ test('Renders Login Link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test('Renders Calendar', () => {
+  render(<Router>< /></Router>);
+  const linkElement = screen.getByText(/?/i);
+  expect(linkElement).toBeInTheDocument();
+});

@@ -9,6 +9,7 @@ function TimeSelector() {
     '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00',
     '20:30', '21:00', '21:30', '22:00', '22:30', '23:00', '23:30'];
   const [busyArray, setBusyArray] = useState([])
+  let startDate = window.sessionStorage.getItem('storedDate')
 
   useEffect(() => {
     getBusyTimes();
@@ -24,10 +25,17 @@ function TimeSelector() {
     window.sessionStorage.setItem('time', e.target.value)
   }
 
+  startDate = window.sessionStorage.getItem('storedDate')
+
   //console.log("Busy Array: ", busyArray)
 
   let busy = [];
-  busyArray.map(events => busy.push(events.startTime));
+  busyArray.map(async events => {
+    if(startDate === events.startDate) {
+      await busy.push(events.startTime)
+    }
+    return busy;
+  })
   //console.log("Busy aka Start Time: ", busy)
 
   return (
