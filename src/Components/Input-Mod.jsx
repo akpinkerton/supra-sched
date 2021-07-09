@@ -24,11 +24,14 @@ function InputModal() {
   const [inputs, setInputs] = useState({});
 
   useEffect(() => {
-    window.sessionStorage.setItem("storedDate", startDate);
     if (inputs !== undefined) {
       postInputs();
     }
-  }, [startDate]);
+  }, [inputs]);
+
+  useEffect(() => {
+    window.sessionStorage.setItem('storedDate', startDate)
+  }, [startDate])
 
   function handleType(e) {
     console.log("type", type);
@@ -45,7 +48,7 @@ function InputModal() {
     let newDate = e.target.value;
     setStartDate(newDate);
     //await console.log(startDate)
-    //window.sessionStorage.setItem("storedDate", startDate);
+    window.sessionStorage.setItem("storedDate", startDate);
   }
 
   function handleEndDate(e) {
