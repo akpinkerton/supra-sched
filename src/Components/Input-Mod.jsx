@@ -116,7 +116,7 @@ function InputModal() {
     })
     postInputs();
     if (duration === '1 hr') {
-      /// SHOULD THERE BE STUFF HERE???
+      ///FIXME: SHOULD THERE BE STUFF HERE???
     }
     console.log("Type: ", inputs.type);
     console.log("Avail: ", inputs.availability);
